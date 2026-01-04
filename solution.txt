@@ -1,2 +1,15 @@
 Please add your pseudocode to this file
 And a written explanation of your solution
+
+Algorithm: Nested loop substring generation
+Approach: Two pointers generate all consecutive substrings
+
+result = []
+for i = 0 to n-1:
+  for j = i+1 to n:
+    result.append(str[i:j])
+return result
+
+Time Complexity: O(n³)
+Why: n(n+1)/2 substrings, each copy costs O(k), total = n(n+1)(n+2)/6 → O(n³)
+Space: O(n³) for storing all substrings
